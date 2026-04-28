@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários | Academia Império Fitness</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'imperio-bg': '#151515',
+              'imperio-card': '#1E1E1E',
+              'imperio-laranja': '#F37021',
+            },
+            fontFamily: {
+              'titulo': ['"Montserrat"', 'sans-serif'], 
+              'texto': ['"Inter"', 'sans-serif'], 
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-imperio-bg text-white font-texto antialiased flex flex-col min-h-screen">
+
+    <header class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <a href="index.html" class="flex items-center">
+    <img src="logo.png" alt="Academia Império Fitness" class="h-24 md:h-28 rounded-xl hover:scale-105 transition-transform duration-300">
+</a>
+        </div>
+        <nav class="flex gap-4 md:gap-8 font-medium text-sm md:text-base">
+            <a href="index.html" class="hover:text-imperio-laranja transition duration-200">Home</a>
+            <a href="planos.html" class="hover:text-imperio-laranja transition duration-200">Planos</a>
+            <a href="modalidades.html" class="hover:text-imperio-laranja transition duration-200">Modalidades</a>
+            <a href="horarios.html" class="text-imperio-laranja">Horários</a>
+            <a href="contato.html" class="hover:text-imperio-laranja transition duration-200">Contato</a>
+        </nav>
+        <a href="contato.html" class="hidden lg:block bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 uppercase tracking-wide text-sm">
+            Aula Experimental
+        </a>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 py-16 max-w-6xl">
+        
+        <div class="text-center mb-16">
+            <span class="text-imperio-laranja font-bold tracking-widest text-sm uppercase">Quando Treinar</span>
+            <h1 class="font-titulo font-black text-5xl md:text-6xl uppercase mt-2 mb-4 leading-tight">
+                Nossos <span class="text-imperio-laranja">Horários</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">Horários pensados para encaixar na sua rotina. De madrugada a noturno, temos o horário certo para você.</p>
+        </div>
+
+        <section class="bg-imperio-laranja rounded-3xl p-8 md:p-12 mb-20 shadow-2xl">
+            <h2 class="text-black font-titulo font-black text-3xl uppercase text-center mb-12 flex items-center justify-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Funcionamento da Academia
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <script>
+                    const diasUteis = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
+                    diasUteis.forEach(dia => {
+                        document.write(`
+                            <div class="bg-white text-black p-6 rounded-2xl shadow-md">
+                                <div class="flex justify-between items-center mb-4 border-b pb-2">
+                                    <h3 class="font-titulo font-bold uppercase tracking-wider">${dia}</h3>
+                                    <span class="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Aberto</span>
+                                </div>
+                                <div class="space-y-3 text-sm">
+                                    <p class="flex justify-between"><span>Manhã</span> <span class="font-bold">05:00 - 12:00</span></p>
+                                    <p class="flex justify-between"><span>Tarde</span> <span class="font-bold">12:00 - 18:00</span></p>
+                                    <p class="flex justify-between border-t pt-2"><span>Noite</span> <span class="font-bold">18:00 - 22:00</span></p>
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
+
+                <div class="bg-white text-black p-6 rounded-2xl shadow-md">
+                    <div class="flex justify-between items-center mb-4 border-b pb-2">
+                        <h3 class="font-titulo font-bold uppercase tracking-wider">Sábado</h3>
+                        <span class="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Aberto</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex justify-between"><span>Manhã</span> <span class="font-bold">06:00 - 10:00</span></p>
+                        <p class="flex justify-between text-gray-400 italic"><span>Intervalo</span> <span>10:00 - 14:00</span></p>
+                        <p class="flex justify-between border-t pt-2"><span>Tarde</span> <span class="font-bold">14:00 - 18:00</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-white/90 text-black p-6 rounded-2xl shadow-md border-2 border-red-200">
+                    <div class="flex justify-between items-center mb-4 border-b pb-2">
+                        <h3 class="font-titulo font-bold uppercase tracking-wider">Domingo</h3>
+                        <span class="bg-red-100 text-red-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Fechado</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <p class="text-xs font-medium text-gray-500">Não funcionamos aos domingos. Descanse para treinar forte na segunda!</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="font-titulo font-black text-3xl uppercase text-center mb-10">Resumo de Horários</h2>
+            <div class="overflow-hidden rounded-2xl border border-gray-800 bg-imperio-card">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-800 text-imperio-laranja uppercase text-sm tracking-widest">
+                        <tr>
+                            <th class="p-6 font-bold">Período</th>
+                            <th class="p-6 font-bold text-center">Status</th>
+                            <th class="p-6 font-bold text-right">Horário de Funcionamento</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800 text-sm">
+                        <tr class="hover:bg-white/5 transition">
+                            <td class="p-6 font-medium">Segunda a Sexta</td>
+                            <td class="p-6 text-center"><span class="bg-green-900/30 text-green-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Aberto</span></td>
+                            <td class="p-6 text-right font-mono text-imperio-laranja font-bold">05:00 ÀS 22:00</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition">
+                            <td class="p-6 font-medium">Sábado - Manhã</td>
+                            <td class="p-6 text-center"><span class="bg-green-900/30 text-green-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Aberto</span></td>
+                            <td class="p-6 text-right font-mono text-imperio-laranja font-bold">06:00 ÀS 10:00</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition">
+                            <td class="p-6 font-medium">Sábado - Tarde</td>
+                            <td class="p-6 text-center"><span class="bg-green-900/30 text-green-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Aberto</span></td>
+                            <td class="p-6 text-right font-mono text-imperio-laranja font-bold">14:00 ÀS 18:00</td>
+                        </tr>
+                        <tr class="bg-red-900/5 transition">
+                            <td class="p-6 font-medium text-gray-500">Domingos e Feriados</td>
+                            <td class="p-6 text-center"><span class="bg-red-900/30 text-red-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Fechado</span></td>
+                            <td class="p-6 text-right font-mono text-gray-500">SEM EXPEDIENTE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="text-center py-10">
+            <p class="text-gray-400 mb-6 italic">Dúvidas sobre horários de aulas específicas?</p>
+            <a href="contato.html" class="bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-md transition duration-300 uppercase tracking-wide">Fale Conosco</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-[#0A0A0A] border-t border-gray-800 pt-16 pb-8 mt-auto text-gray-400 text-sm">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <img src="logo.png" alt="Academia Império Fitness" class="h-20 md:h-24 rounded-lg mb-6 shadow-lg border border-gray-800">
+                <p class="italic">"Se aparecerem pedras no caminho, levante-as e faça 4 séries de 10."</p>
+            </div>
+            <div>
+                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Fale Conosco</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">Rua Capitão Pedro Rodrigues, Nº 430<br>Magano – Garanhuns/PE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 border-t border-gray-800 pt-8 text-center text-xs">
+            &copy; 2026 Academia Império Fitness. Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>

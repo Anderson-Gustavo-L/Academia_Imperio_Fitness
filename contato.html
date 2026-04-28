@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato & Localização | Academia Império Fitness</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'imperio-bg': '#151515',
+              'imperio-card': '#1E1E1E',
+              'imperio-laranja': '#F37021',
+            },
+            fontFamily: {
+              'titulo': ['"Montserrat"', 'sans-serif'], 
+              'texto': ['"Inter"', 'sans-serif'], 
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-imperio-bg text-white font-texto antialiased flex flex-col min-h-screen">
+
+    <header class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <a href="index.html" class="flex items-center">
+    <img src="logo.png" alt="Academia Império Fitness" class="h-24 md:h-28 rounded-xl hover:scale-105 transition-transform duration-300">
+</a>
+        <nav class="flex gap-4 md:gap-8 font-medium text-sm md:text-base">
+            <a href="index.html" class="hover:text-imperio-laranja transition duration-200">Home</a>
+            <a href="planos.html" class="hover:text-imperio-laranja transition duration-200">Planos</a>
+            <a href="modalidades.html" class="hover:text-imperio-laranja transition duration-200">Modalidades</a>
+            <a href="horarios.html" class="hover:text-imperio-laranja transition duration-200">Horários</a>
+            <a href="contato.html" class="text-imperio-laranja">Contato</a>
+        </nav>
+        <a href="contato.html" class="hidden lg:block bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 uppercase tracking-wide text-sm">
+            Aula Experimental
+        </a>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 py-12 max-w-6xl">
+        
+        <div class="text-center mb-16">
+            <span class="text-imperio-laranja font-bold tracking-widest text-sm uppercase">Estamos aqui para você</span>
+            <h1 class="font-titulo font-black text-5xl md:text-6xl uppercase mt-2 mb-4 leading-tight">
+                Contato & <span class="text-imperio-laranja">Localização</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">Tire suas dúvidas, agende uma visita ou marque sua aula experimental. Estamos de portas abertas!</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <section class="bg-white text-black p-8 md:p-10 rounded-2xl shadow-2xl">
+                <h2 class="font-titulo font-black text-2xl uppercase mb-2">Envie uma mensagem</h2>
+                <p class="text-gray-500 text-sm mb-8">Preencha o formulário e entraremos em contato pelo WhatsApp.</p>
+
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="nome" class="block text-xs font-black uppercase tracking-widest mb-2">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required 
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg py-4 px-4 focus:outline-none focus:ring-2 focus:ring-imperio-laranja/20 focus:border-imperio-laranja transition">
+                    </div>
+
+                    <div>
+                        <label for="whatsapp" class="block text-xs font-black uppercase tracking-widest mb-2">Telefone / WhatsApp *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(87) 9 9999-9999" required 
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg py-4 px-4 focus:outline-none focus:ring-2 focus:ring-imperio-laranja/20 focus:border-imperio-laranja transition">
+                    </div>
+
+                    <div>
+                        <label for="mensagem" class="block text-xs font-black uppercase tracking-widest mb-2">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Dúvidas, interesse em planos, agendamento de aula experimental..."
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg py-4 px-4 focus:outline-none focus:ring-2 focus:ring-imperio-laranja/20 focus:border-imperio-laranja transition resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-imperio-laranja hover:bg-orange-600 text-white font-black py-5 rounded-xl shadow-lg shadow-imperio-laranja/30 transition duration-300 uppercase tracking-widest flex items-center justify-center gap-2">
+                        Enviar Mensagem
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-90" viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" /></svg>
+                    </button>
+                </form>
+
+                <div class="grid grid-cols-2 gap-4 mt-8">
+                    <a href="#" class="flex items-center gap-3 p-4 bg-gray-900 text-white rounded-xl hover:bg-imperio-laranja transition group">
+                        <div class="bg-gray-800 p-2 rounded-lg group-hover:bg-white/20 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase">WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/academia_imperio.gus" target="_blank" class="flex items-center gap-3 p-4 bg-gray-900 text-white rounded-xl hover:bg-imperio-laranja transition group">
+                        <div class="bg-gray-800 p-2 rounded-lg group-hover:bg-white/20 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase">Instagram</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="space-y-8">
+                <div class="bg-imperio-card p-8 rounded-2xl border border-gray-800">
+                    <h3 class="text-imperio-laranja font-titulo font-black text-xl uppercase mb-6">Como Chegar</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="bg-imperio-laranja/10 p-3 rounded-lg h-fit">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-imperio-laranja" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Endereço</p>
+                                <p class="text-gray-200">Rua Capitão Pedro Rodrigues, Nº 430<br>Bairro Magano – Garanhuns/PE</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="bg-imperio-laranja/10 p-3 rounded-lg h-fit">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-imperio-laranja" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Horários</p>
+                                <p class="text-gray-200">Segunda a Sexta: 05h às 22h<br>Sábado: 06h-10h e 14h-18h</p>
+                                <p class="text-red-400 text-xs mt-1 font-medium">Domingo: Fechado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden h-[300px] border border-gray-800 shadow-2xl relative grayscale hover:grayscale-0 transition duration-500">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.520445585094!2d-36.4950346!3d-8.9175401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a77610f46d5c645%3A0x7d6c6e3988e0e7a!2sR.%20Cap.%20Pedro%20Rodrigues%2C%20430%20-%20Magano%2C%20Garanhuns%20-%20PE!5e0!3m2!1spt-BR!2sbr!4v1714150000000!5m2!1spt-BR!2sbr" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <a href="https://maps.app.goo.gl/3XpXG2k9G2k9G2k9G" target="_blank" class="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-white/10 border border-gray-800 py-4 rounded-xl text-xs font-bold uppercase tracking-widest transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-imperio-laranja" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    Abrir no Google Maps
+                </a>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="bg-[#0A0A0A] border-t border-gray-800 pt-16 pb-8 mt-auto text-gray-400 text-sm">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <img src="logo.png" alt="Academia Império Fitness" class="h-20 md:h-24 rounded-lg mb-6 shadow-lg border border-gray-800">
+                <p class="italic">"Se aparecerem pedras no caminho, levante-as e faça 4 séries de 10."</p>
+            </div>
+            <div>
+                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Navegação</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                    <li><a href="planos.html" class="hover:text-white transition">Planos</a></li>
+                    <li><a href="modalidades.html" class="hover:text-white transition">Modalidades</a></li>
+                    <li><a href="horarios.html" class="hover:text-white transition">Horários</a></li>
+                    <li><a href="contato.html" class="hover:text-white transition">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Localização Real</h4>
+                <p>Rua Capitão Pedro Rodrigues, Nº 430<br>Magano – Garanhuns/PE</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 border-t border-gray-800 pt-8 text-center text-xs">
+            &copy; 2026 Academia Império Fitness. Todos os direitos reservados. Garanhuns-PE.
+        </div>
+    </footer>
+
+</body>
+</html>

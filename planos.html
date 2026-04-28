@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos | Academia Império Fitness</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'imperio-bg': '#151515',
+              'imperio-card': '#1E1E1E',
+              'imperio-laranja': '#F37021',
+            },
+            fontFamily: {
+              'titulo': ['"Montserrat"', 'sans-serif'], 
+              'texto': ['"Inter"', 'sans-serif'], 
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-imperio-bg text-white font-texto antialiased flex flex-col min-h-screen">
+
+    <header class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <a href="index.html" class="flex items-center">
+    <img src="logo.png" alt="Academia Império Fitness" class="h-24 md:h-28 rounded-xl hover:scale-105 transition-transform duration-300">
+</a>
+        <nav class="flex gap-4 md:gap-8 font-medium text-sm md:text-base">
+            <a href="index.html" class="hover:text-imperio-laranja transition duration-200">Home</a>
+            <a href="planos.html" class="text-imperio-laranja">Planos</a>
+            <a href="modalidades.html" class="hover:text-imperio-laranja transition duration-200">Modalidades</a>
+            <a href="horarios.html" class="hover:text-imperio-laranja transition duration-200">Horários</a>
+            <a href="contato.html" class="hover:text-imperio-laranja transition duration-200">Contato</a>
+        </nav>
+        <a href="contato.html" class="hidden lg:block bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 uppercase tracking-wide text-sm">
+            Aula Experimental
+        </a>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 py-16 max-w-6xl">
+        
+        <div class="text-center mb-16">
+            <span class="text-imperio-laranja font-bold tracking-widest text-sm uppercase">Invista em Você</span>
+            <h1 class="font-titulo font-black text-5xl md:text-6xl uppercase mt-2 mb-4 leading-tight">
+                Planos que cabem <br><span class="text-imperio-laranja">no seu objetivo</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">Escolha o plano ideal para a sua jornada. Todos incluem acesso completo à estrutura e equipe da Império Fitness.</p>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            
+            <div class="bg-imperio-card rounded-2xl p-8 border border-gray-800 shadow-xl">
+                <div class="flex items-center gap-2 text-gray-300 mb-4 uppercase tracking-widest text-sm font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-imperio-laranja" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    Mensal
+                </div>
+                <div class="text-4xl font-titulo font-black mb-2">R$ 89,90<span class="text-lg text-gray-500 font-medium">/mês</span></div>
+                <p class="text-gray-400 text-sm mb-8 h-10">Perfeito para quem quer começar sem compromisso de longo prazo.</p>
+                <ul class="space-y-4 mb-8 text-sm text-gray-300">
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Acesso ilimitado à musculação</li>
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Todas as aulas e modalidades</li>
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Avaliação física inicial</li>
+                </ul>
+                <a href="contato.html" class="block w-full bg-gray-800 hover:bg-imperio-laranja text-center text-white font-bold py-3 rounded transition duration-300">MATRICULE-SE</a>
+            </div>
+
+            <div class="bg-white text-black rounded-2xl p-8 border-4 border-imperio-laranja shadow-2xl relative transform md:-translate-y-4">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-imperio-laranja text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Mais Popular
+                </div>
+                <div class="flex items-center gap-2 text-gray-800 mb-4 uppercase tracking-widest text-sm font-bold mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-imperio-laranja" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
+                    Trimestral
+                </div>
+                <div class="text-5xl font-titulo font-black mb-1">R$ 74,90<span class="text-lg text-gray-500 font-medium">/mês</span></div>
+                <p class="text-gray-600 text-sm mb-6 h-10 mt-2">O plano mais popular! Mais economia e compromisso com seus resultados.</p>
+                <ul class="space-y-4 mb-8 text-sm font-medium">
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Tudo do plano Mensal</li>
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Economia de R$ 15/mês</li>
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Reavaliação física mensal</li>
+                </ul>
+                <a href="contato.html" class="block w-full bg-imperio-laranja hover:bg-orange-600 text-center text-white font-bold py-4 rounded shadow-lg transition duration-300">MATRICULE-SE</a>
+            </div>
+
+            <div class="bg-imperio-card rounded-2xl p-8 border border-gray-800 shadow-xl relative">
+                <div class="absolute top-0 right-0 transform translate-x-2 -translate-y-2 bg-gray-700 text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest border border-gray-600">
+                    Melhor Custo
+                </div>
+                <div class="flex items-center gap-2 text-gray-300 mb-4 uppercase tracking-widest text-sm font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-imperio-laranja" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                    Anual
+                </div>
+                <div class="text-4xl font-titulo font-black mb-2">R$ 59,90<span class="text-lg text-gray-500 font-medium">/mês</span></div>
+                <p class="text-gray-400 text-sm mb-8 h-10">Para quem é sério nos treinos. O maior custo-benefício da academia.</p>
+                <ul class="space-y-4 mb-8 text-sm text-gray-300">
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Tudo do plano Trimestral</li>
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Economia de R$ 30/mês</li>
+                    <li class="flex items-center gap-3"><svg class="h-5 w-5 text-imperio-laranja" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Camiseta exclusiva da academia</li>
+                </ul>
+                <a href="contato.html" class="block w-full bg-gray-800 hover:bg-imperio-laranja text-center text-white font-bold py-3 rounded transition duration-300">MATRICULE-SE</a>
+            </div>
+
+        </section>
+
+        <div class="mt-20 text-center border-t border-gray-800 pt-16 mb-8">
+            <h2 class="font-titulo font-bold text-3xl uppercase mb-4">Primeira Aula é Grátis</h2>
+            <p class="text-gray-400 mb-8">Venha conhecer a estrutura antes de se matricular. Agende sua aula experimental gratuita!</p>
+            <a href="contato.html" class="inline-block bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-md transition duration-300 uppercase tracking-wide">Agendar Aula Experimental</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-[#0A0A0A] border-t border-gray-800 pt-16 pb-8 mt-auto">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <img src="logo.png" alt="Academia Império Fitness" class="h-20 md:h-24 rounded-lg mb-6 shadow-lg border border-gray-800">
+                <p class="text-gray-400 text-sm italic mb-6">"Se aparecerem pedras no caminho, levante-as e faça 4 séries de 10."</p>
+            </div>
+            <div>
+                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Navegação</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                    <li><a href="planos.html" class="hover:text-white transition">Planos</a></li>
+                    <li><a href="modalidades.html" class="hover:text-white transition">Modalidades</a></li>
+                    <li><a href="horarios.html" class="hover:text-white transition">Horários</a></li>
+                    <li><a href="contato.html" class="hover:text-white transition">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Fale Conosco</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex items-start gap-3">
+                        <svg class="h-5 w-5 text-gray-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        Rua Capitão Pedro Rodrigues, Nº 430<br>Magano – Garanhuns/PE
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="h-5 w-5 text-gray-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Seg-Sex: 05h às 22h | Sáb: 06h-10h e 14h-18h
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 Academia Império Fitness. Todos os direitos reservados.</p>
+            <p class="mt-2 md:mt-0">Garanhuns - PE</p>
+        </div>
+    </footer>
+
+</body>
+</html>
