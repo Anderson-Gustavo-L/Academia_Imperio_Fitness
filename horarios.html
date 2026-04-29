@@ -4,173 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horários | Academia Império Fitness</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'imperio-bg': '#151515',
-              'imperio-card': '#1E1E1E',
-              'imperio-laranja': '#F37021',
-            },
-            fontFamily: {
-              'titulo': ['"Montserrat"', 'sans-serif'], 
-              'texto': ['"Inter"', 'sans-serif'], 
-            }
-          }
-        }
-      }
-    </script>
 </head>
-<body class="bg-imperio-bg text-white font-texto antialiased flex flex-col min-h-screen">
+<body>
 
-    <header class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <a href="index.html" class="flex items-center">
-    <img src="logo.png" alt="Academia Império Fitness" class="h-24 md:h-28 rounded-xl hover:scale-105 transition-transform duration-300">
-</a>
-        </div>
-        <nav class="flex gap-4 md:gap-8 font-medium text-sm md:text-base">
-            <a href="index.html" class="hover:text-imperio-laranja transition duration-200">Home</a>
-            <a href="planos.html" class="hover:text-imperio-laranja transition duration-200">Planos</a>
-            <a href="modalidades.html" class="hover:text-imperio-laranja transition duration-200">Modalidades</a>
-            <a href="horarios.html" class="text-imperio-laranja">Horários</a>
-            <a href="contato.html" class="hover:text-imperio-laranja transition duration-200">Contato</a>
+<header class="header">
+    <div class="container header-content">
+        <a href="index.html" class="logo"><img src="logo.png" alt="Academia Império Fitness"></a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="planos.html">Planos</a>
+            <a href="modalidades.html">Modalidades</a>
+            <a href="horarios.html" class="active">Horários</a>
+            <a href="contato.html">Contato</a>
         </nav>
-        <a href="contato.html" class="hidden lg:block bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 uppercase tracking-wide text-sm">
-            Aula Experimental
-        </a>
-    </header>
+        <a href="contato.html" class="btn primary desktop-only">Aula Experimental</a>
+    </div>
+</header>
 
-    <main class="flex-grow container mx-auto px-6 py-16 max-w-6xl">
-        
-        <div class="text-center mb-16">
-            <span class="text-imperio-laranja font-bold tracking-widest text-sm uppercase">Quando Treinar</span>
-            <h1 class="font-titulo font-black text-5xl md:text-6xl uppercase mt-2 mb-4 leading-tight">
-                Nossos <span class="text-imperio-laranja">Horários</span>
-            </h1>
-            <p class="text-gray-400 max-w-2xl mx-auto">Horários pensados para encaixar na sua rotina. De madrugada a noturno, temos o horário certo para você.</p>
-        </div>
-
-        <section class="bg-imperio-laranja rounded-3xl p-8 md:p-12 mb-20 shadow-2xl">
-            <h2 class="text-black font-titulo font-black text-3xl uppercase text-center mb-12 flex items-center justify-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                Funcionamento da Academia
-            </h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <script>
-                    const diasUteis = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
-                    diasUteis.forEach(dia => {
-                        document.write(`
-                            <div class="bg-white text-black p-6 rounded-2xl shadow-md">
-                                <div class="flex justify-between items-center mb-4 border-b pb-2">
-                                    <h3 class="font-titulo font-bold uppercase tracking-wider">${dia}</h3>
-                                    <span class="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Aberto</span>
-                                </div>
-                                <div class="space-y-3 text-sm">
-                                    <p class="flex justify-between"><span>Manhã</span> <span class="font-bold">05:00 - 12:00</span></p>
-                                    <p class="flex justify-between"><span>Tarde</span> <span class="font-bold">12:00 - 18:00</span></p>
-                                    <p class="flex justify-between border-t pt-2"><span>Noite</span> <span class="font-bold">18:00 - 22:00</span></p>
-                                </div>
-                            </div>
-                        `);
-                    });
-                </script>
-
-                <div class="bg-white text-black p-6 rounded-2xl shadow-md">
-                    <div class="flex justify-between items-center mb-4 border-b pb-2">
-                        <h3 class="font-titulo font-bold uppercase tracking-wider">Sábado</h3>
-                        <span class="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Aberto</span>
-                    </div>
-                    <div class="space-y-3 text-sm">
-                        <p class="flex justify-between"><span>Manhã</span> <span class="font-bold">06:00 - 10:00</span></p>
-                        <p class="flex justify-between text-gray-400 italic"><span>Intervalo</span> <span>10:00 - 14:00</span></p>
-                        <p class="flex justify-between border-t pt-2"><span>Tarde</span> <span class="font-bold">14:00 - 18:00</span></p>
-                    </div>
-                </div>
-
-                <div class="bg-white/90 text-black p-6 rounded-2xl shadow-md border-2 border-red-200">
-                    <div class="flex justify-between items-center mb-4 border-b pb-2">
-                        <h3 class="font-titulo font-bold uppercase tracking-wider">Domingo</h3>
-                        <span class="bg-red-100 text-red-700 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Fechado</span>
-                    </div>
-                    <div class="flex flex-col items-center justify-center py-4 text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                        <p class="text-xs font-medium text-gray-500">Não funcionamos aos domingos. Descanse para treinar forte na segunda!</p>
-                    </div>
-                </div>
-
+<main>
+    <section class="schedule-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="tag-small">Quando Treinar</span>
+                <h1 class="page-title">Nossos <span>Horários</span></h1>
+                <p class="subtitle">Horários pensados para encaixar na sua rotina. De madrugada a noturno, temos o horário certo para você.</p>
             </div>
-        </section>
 
-        <section class="mb-20">
-            <h2 class="font-titulo font-black text-3xl uppercase text-center mb-10">Resumo de Horários</h2>
-            <div class="overflow-hidden rounded-2xl border border-gray-800 bg-imperio-card">
-                <table class="w-full text-left border-collapse">
-                    <thead class="bg-gray-800 text-imperio-laranja uppercase text-sm tracking-widest">
+            <div class="schedule-panel">
+                <h3 class="panel-title">Funcionamento da Academia</h3>
+                
+                <div class="days-grid">
+                    <div class="day-card">
+                        <div class="day-top"><h4>Segunda</h4><span class="badge-open">Aberto</span></div>
+                        <p>Manhã <span>05:00 - 12:00</span></p>
+                        <p>Tarde <span>12:00 - 18:00</span></p>
+                        <p>Noite <span>18:00 - 22:00</span></p>
+                    </div>
+                    <div class="day-card">
+                        <div class="day-top"><h4>Terça</h4><span class="badge-open">Aberto</span></div>
+                        <p>Manhã <span>05:00 - 12:00</span></p>
+                        <p>Tarde <span>12:00 - 18:00</span></p>
+                        <p>Noite <span>18:00 - 22:00</span></p>
+                    </div>
+                    <div class="day-card">
+                        <div class="day-top"><h4>Quarta</h4><span class="badge-open">Aberto</span></div>
+                        <p>Manhã <span>05:00 - 12:00</span></p>
+                        <p>Tarde <span>12:00 - 18:00</span></p>
+                        <p>Noite <span>18:00 - 22:00</span></p>
+                    </div>
+                    <div class="day-card">
+                        <div class="day-top"><h4>Quinta</h4><span class="badge-open">Aberto</span></div>
+                        <p>Manhã <span>05:00 - 12:00</span></p>
+                        <p>Tarde <span>12:00 - 18:00</span></p>
+                        <p>Noite <span>18:00 - 22:00</span></p>
+                    </div>
+                    <div class="day-card">
+                        <div class="day-top"><h4>Sexta</h4><span class="badge-open">Aberto</span></div>
+                        <p>Manhã <span>05:00 - 12:00</span></p>
+                        <p>Tarde <span>12:00 - 18:00</span></p>
+                        <p>Noite <span>18:00 - 22:00</span></p>
+                    </div>
+                    <div class="day-card">
+                        <div class="day-top"><h4>Sábado</h4><span class="badge-open">Aberto</span></div>
+                        <p>Manhã <span>06:00 - 10:00</span></p>
+                        <p class="gray-text">Intervalo <span>10:00 - 14:00</span></p>
+                        <p>Tarde <span>14:00 - 18:00</span></p>
+                    </div>
+                    <div class="day-card closed-card">
+                        <div class="day-top"><h4>Domingo</h4><span class="badge-closed">Fechado</span></div>
+                        <p class="closed-msg text-center">Não funcionamos aos domingos. Descanse para treinar forte na segunda!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 60px;">
+                <h2 class="table-title">Resumo de Horários</h2>
+            </div>
+            
+            <div class="table-wrapper">
+                <table class="simple-table">
+                    <thead>
                         <tr>
-                            <th class="p-6 font-bold">Período</th>
-                            <th class="p-6 font-bold text-center">Status</th>
-                            <th class="p-6 font-bold text-right">Horário de Funcionamento</th>
+                            <th>Período</th>
+                            <th>Status</th>
+                            <th style="text-align: right;">Horário de Funcionamento</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-800 text-sm">
-                        <tr class="hover:bg-white/5 transition">
-                            <td class="p-6 font-medium">Segunda a Sexta</td>
-                            <td class="p-6 text-center"><span class="bg-green-900/30 text-green-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Aberto</span></td>
-                            <td class="p-6 text-right font-mono text-imperio-laranja font-bold">05:00 ÀS 22:00</td>
+                    <tbody>
+                        <tr>
+                            <td>Segunda a Sexta</td>
+                            <td><span class="badge-open table-badge">Aberto</span></td>
+                            <td class="time-col">05:00 ÀS 22:00</td>
                         </tr>
-                        <tr class="hover:bg-white/5 transition">
-                            <td class="p-6 font-medium">Sábado - Manhã</td>
-                            <td class="p-6 text-center"><span class="bg-green-900/30 text-green-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Aberto</span></td>
-                            <td class="p-6 text-right font-mono text-imperio-laranja font-bold">06:00 ÀS 10:00</td>
+                        <tr>
+                            <td>Sábado - Manhã</td>
+                            <td><span class="badge-open table-badge">Aberto</span></td>
+                            <td class="time-col">06:00 ÀS 10:00</td>
                         </tr>
-                        <tr class="hover:bg-white/5 transition">
-                            <td class="p-6 font-medium">Sábado - Tarde</td>
-                            <td class="p-6 text-center"><span class="bg-green-900/30 text-green-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Aberto</span></td>
-                            <td class="p-6 text-right font-mono text-imperio-laranja font-bold">14:00 ÀS 18:00</td>
+                        <tr>
+                            <td>Sábado - Tarde</td>
+                            <td><span class="badge-open table-badge">Aberto</span></td>
+                            <td class="time-col">14:00 ÀS 18:00</td>
                         </tr>
-                        <tr class="bg-red-900/5 transition">
-                            <td class="p-6 font-medium text-gray-500">Domingos e Feriados</td>
-                            <td class="p-6 text-center"><span class="bg-red-900/30 text-red-500 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Fechado</span></td>
-                            <td class="p-6 text-right font-mono text-gray-500">SEM EXPEDIENTE</td>
+                        <tr class="row-closed">
+                            <td>Domingos e Feriados</td>
+                            <td><span class="badge-closed table-badge">Fechado</span></td>
+                            <td style="text-align: right;">SEM EXPEDIENTE</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </section>
 
-        <div class="text-center py-10">
-            <p class="text-gray-400 mb-6 italic">Dúvidas sobre horários de aulas específicas?</p>
-            <a href="contato.html" class="bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-md transition duration-300 uppercase tracking-wide">Fale Conosco</a>
-        </div>
-
-    </main>
-
-    <footer class="bg-[#0A0A0A] border-t border-gray-800 pt-16 pb-8 mt-auto text-gray-400 text-sm">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-                <img src="logo.png" alt="Academia Império Fitness" class="h-20 md:h-24 rounded-lg mb-6 shadow-lg border border-gray-800">
-                <p class="italic">"Se aparecerem pedras no caminho, levante-as e faça 4 séries de 10."</p>
-            </div>
-            <div>
-                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Fale Conosco</h4>
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">Rua Capitão Pedro Rodrigues, Nº 430<br>Magano – Garanhuns/PE</li>
-                </ul>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="contato.html" class="btn primary">Fale Conosco</a>
             </div>
         </div>
-        <div class="container mx-auto px-6 border-t border-gray-800 pt-8 text-center text-xs">
-            &copy; 2026 Academia Império Fitness. Todos os direitos reservados.
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <!-- ESQUERDA -->
+        <div class="footer-left">
+            <img src="logo.png" alt="Logo" class="footer-logo">
+
+            <p class="quote">
+                "Se aparecerem pedras no caminho, levante-as e faça 4 séries de 10."
+            </p>
+
+            <a href="https://www.instagram.com/academia_imperio.gus" target="_blank" class="instagram">
+                <!-- ÍCONE INSTAGRAM -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+                @ACADEMIA_IMPERIO.GUS
+            </a>
         </div>
-    </footer>
+
+        <!-- MEIO -->
+        <div class="footer-center">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="modalidades.html">Modalidades</a></li>
+                <li><a href="horarios.html">Horários</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- DIREITA -->
+        <div class="footer-right">
+            <h4>Fale Conosco</h4>
+
+            <ul class="contact-list">
+                <!-- LOCALIZAÇÃO -->
+                <li>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span>
+                        Rua Capitão Pedro Rodrigues, Nº 430<br>
+                        Magano – Garanhuns/PE
+                    </span>
+                </li>
+
+                <!-- WHATSAPP -->
+                <li>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20.52 3.48A11.8 11.8 0 0012 0C5.37 0 .02 5.35 0 11.98c0 2.11.55 4.17 1.6 5.98L0 24l6.24-1.63A11.96 11.96 0 0012 24c6.63 0 12-5.35 12-11.98 0-3.2-1.25-6.2-3.48-8.54zM12 21.8c-1.82 0-3.6-.49-5.16-1.41l-.37-.22-3.7.97.99-3.6-.24-.37A9.8 9.8 0 012.2 12C2.2 6.6 6.6 2.2 12 2.2c2.61 0 5.07 1.02 6.91 2.86A9.73 9.73 0 0121.8 12c0 5.4-4.4 9.8-9.8 9.8zm5.39-7.33c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.55.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                    </svg>
+                    <span>WhatsApp  +55 (87) 988112436</span>
+                </li>
+
+                <!-- RELÓGIO -->
+                <li>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 1a11 11 0 1011 11A11.01 11.01 0 0012 1zm1 11.59V6h-2v8h6v-2z"/>
+                    </svg>
+                    <span>
+                        Seg-Sex: 05h às 22h<br>
+                        Sáb: 06h-10h | 14h-18h<br>
+                        Dom: Fechado
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Academia Império Fitness</p>
+    </div>
+</footer>
 
 </body>
 </html>
