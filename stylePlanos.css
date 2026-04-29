@@ -1,0 +1,357 @@
+:root {
+    --bg: #151515;
+    --card: #2a2a2a;
+    --orange: #F37021;
+    --gray: #aaaaaa;
+    --dark-blue: #0f172a;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: white;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: var(--gray);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--orange);
+}
+
+/* MAIN */
+.main {
+    padding: 60px 0;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.intro h1 {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.intro span {
+    color: var(--orange);
+}
+
+.intro p {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* PLANOS */
+.plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.plan-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 14px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* TÍTULO */
+.plan-card h3 {
+    margin-bottom: 10px;
+}
+
+/* PREÇO */
+.price {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 15px 0;
+}
+
+/* preço mensal e anual */
+.plan-card .price {
+    color: white;
+}
+
+/* descrição */
+.description {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+/* lista */
+.plan-card ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.plan-card li {
+    margin-bottom: 10px;
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* botão azul escuro */
+.secondary {
+    background: var(--dark-blue);
+    color: white;
+}
+
+/* botão laranja */
+.primary {
+    background: var(--orange);
+    color: white;
+}
+
+/* CARD DESTAQUE */
+.highlight {
+    background: white;
+    color: black;
+    border: 3px solid var(--orange);
+
+    transform: translateY(-30px) scale(1.05);
+    z-index: 2;
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* preço preto no destaque */
+.highlight .price {
+    color: black;
+}
+
+
+/* badge */
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+/* hover efeito */
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight:hover {
+    transform: translateY(-35px) scale(1.07);
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    background: #0a0a0a;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* COLUNAS */
+.footer-left,
+.footer-center,
+.footer-right {
+    width: 30%;
+}
+
+/* LOGO */
+.footer-logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* FRASE */
+.footer-quote {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 20px;
+    border-left: 2px solid #F37021;
+    padding-left: 10px;
+}
+
+
+
+.instagram svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.instagram:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+/* INSTAGRAM */
+.instagram-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--gray);
+    border: 1px solid #444;
+    padding: 8px 12px;
+    width: fit-content;
+}
+
+.instagram-link:hover {
+    color: #F37021;
+}
+
+/* TÍTULOS */
+.footer h4 {
+    color: #F37021;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* LISTAS */
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.footer ul li a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: white;
+}
+
+/* ITENS COM ÍCONE */
+.item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* ÍCONES */
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: #666;
+    flex-shrink: 0;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    padding-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 11px;
+    color: #666;
+}
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid #333;
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.instagram-link:hover {
+    border-color: #F37021;
+    color: #F37021;
+}
+
