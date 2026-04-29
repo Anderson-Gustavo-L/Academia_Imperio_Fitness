@@ -4,174 +4,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modalidades | Academia Império Fitness</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="styleModalidades.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'imperio-bg': '#151515',
-              'imperio-card': '#1E1E1E',
-              'imperio-laranja': '#F37021',
-            },
-            fontFamily: {
-              'titulo': ['"Montserrat"', 'sans-serif'], 
-              'texto': ['"Inter"', 'sans-serif'], 
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-        .modalidade-card {
-            transition: all 0.4s ease;
-            overflow: hidden;
-            position: relative;
-        }
-        .modalidade-card:hover img {
-            transform: scale(1.1);
-            filter: brightness(0.4);
-        }
-        .modalidade-info {
-            transition: all 0.4s ease;
-            opacity: 0.9;
-        }
-        .modalidade-card:hover .modalidade-info {
-            opacity: 1;
-            transform: translateY(-10px);
-        }
-    </style>
 </head>
-<body class="bg-imperio-bg text-white font-texto antialiased flex flex-col min-h-screen">
 
-    <header class="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <a href="index.html" class="flex items-center">
-    <img src="logo.png" alt="Academia Império Fitness" class="h-24 md:h-28 rounded-xl hover:scale-105 transition-transform duration-300">
-</a>
-        <nav class="flex gap-4 md:gap-8 font-medium text-sm md:text-base">
-            <a href="index.html" class="hover:text-imperio-laranja transition duration-200">Home</a>
-            <a href="planos.html" class="hover:text-imperio-laranja transition duration-200">Planos</a>
-            <a href="modalidades.html" class="text-imperio-laranja">Modalidades</a>
-            <a href="horarios.html" class="hover:text-imperio-laranja transition duration-200">Horários</a>
-            <a href="contato.html" class="hover:text-imperio-laranja transition duration-200">Contato</a>
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <a href="index.html">
+            <img src="logo.png" class="logo">
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="planos.html">Planos</a>
+            <a href="modalidades.html" class="active">Modalidades</a>
+            <a href="horarios.html">Horários</a>
+            <a href="contato.html">Contato</a>
         </nav>
-        <a href="contato.html" class="hidden lg:block bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition duration-300 uppercase tracking-wide text-sm">
+
+        <a href="contato.html" class="btn primary desktop-only">
             Aula Experimental
         </a>
-    </header>
+    </div>
+</header>
 
-    <main class="flex-grow container mx-auto px-6 py-16 max-w-6xl">
-        
-        <div class="text-center mb-16">
-            <span class="text-imperio-laranja font-bold tracking-widest text-sm uppercase">O que oferecemos</span>
-            <h1 class="font-titulo font-black text-5xl md:text-6xl uppercase mt-2 mb-4 leading-tight">
-                Muito além da <br><span class="text-imperio-laranja">Musculação</span>
-            </h1>
-            <p class="text-gray-400 max-w-2xl mx-auto">Modalidades para todos os perfis e objetivos. Passe o rato nas fotos para ver os benefícios de cada treino.</p>
-        </div>
+<main class="container main">
 
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <article class="modalidade-card group rounded-2xl aspect-[4/5] bg-gray-900">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" alt="Musculação" class="w-full h-full object-cover transition-transform duration-500 brightness-75">
-                <div class="modalidade-info absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black via-black/60 to-transparent">
-                    <span class="bg-imperio-laranja/20 text-imperio-laranja text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Força & Hipertrofia</span>
-                    <h3 class="text-2xl font-titulo font-black uppercase">Musculação</h3>
-                </div>
-            </article>
+    <!-- INTRO -->
+    <section class="intro">
+        <span class="tag">O que oferecemos</span>
 
-            <article class="modalidade-card group rounded-2xl aspect-[4/5] bg-gray-900">
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop" alt="Funcional" class="w-full h-full object-cover transition-transform duration-500 brightness-75">
-                <div class="modalidade-info absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black via-black/60 to-transparent">
-                    <span class="bg-imperio-laranja/20 text-imperio-laranja text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Condicionamento Total</span>
-                    <h3 class="text-2xl font-titulo font-black uppercase">Funcional</h3>
-                </div>
-            </article>
+        <h1>
+            Muito além da <br>
+            <span>Musculação</span>
+        </h1>
 
-            <article class="modalidade-card group rounded-2xl aspect-[4/5] bg-gray-900">
-                <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600&auto=format&fit=crop" alt="Cardio" class="w-full h-full object-cover transition-transform duration-500 brightness-75">
-                <div class="modalidade-info absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black via-black/60 to-transparent">
-                    <span class="bg-imperio-laranja/20 text-imperio-laranja text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Saúde Cardiovascular</span>
-                    <h3 class="text-2xl font-titulo font-black uppercase">Cardio</h3>
-                </div>
-            </article>
+        <p>
+            Modalidades para todos os perfis e objetivos.
+        </p>
+    </section>
 
-            <article class="modalidade-card group rounded-2xl aspect-[4/5] bg-gray-900">
-                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop" alt="Yoga" class="w-full h-full object-cover transition-transform duration-500 brightness-75">
-                <div class="modalidade-info absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black via-black/60 to-transparent">
-                    <span class="bg-imperio-laranja/20 text-imperio-laranja text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Flexibilidade & Equilíbrio</span>
-                    <h3 class="text-2xl font-titulo font-black uppercase">Yoga & Pilates</h3>
-                </div>
-            </article>
+    <!-- GRID -->
+    <section class="modalidades">
 
-            <article class="modalidade-card group rounded-2xl aspect-[4/5] bg-gray-900">
-                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=600&auto=format&fit=crop" alt="Boxe" class="w-full h-full object-cover transition-transform duration-500 brightness-75">
-                <div class="modalidade-info absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black via-black/60 to-transparent">
-                    <span class="bg-imperio-laranja/20 text-imperio-laranja text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Arte Marcial & Defesa</span>
-                    <h3 class="text-2xl font-titulo font-black uppercase">Boxe</h3>
-                </div>
-            </article>
+        <!-- CARD -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop">
 
-            <article class="modalidade-card group rounded-2xl aspect-[4/5] bg-gray-900">
-                <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?q=80&w=600&auto=format&fit=crop" alt="Spinning" class="w-full h-full object-cover transition-transform duration-500 brightness-75">
-                <div class="modalidade-info absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black via-black/60 to-transparent">
-                    <span class="bg-imperio-laranja/20 text-imperio-laranja text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">Energia & Diversão</span>
-                    <h3 class="text-2xl font-titulo font-black uppercase">Spinning</h3>
-                </div>
-            </article>
+            <div class="overlay">
+                <span>Força & Hipertrofia</span>
+                <h3>Musculação</h3>
+            </div>
+        </article>
 
-        </section>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop">
 
-        <div class="mt-20 text-center">
-            <p class="text-gray-400 mb-6 italic">Não sabe qual modalidade é ideal para você?</p>
-            <a href="contato.html" class="inline-flex items-center gap-2 bg-imperio-laranja hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-md transition duration-300 uppercase tracking-wide">
-                Fale com nossos professores
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+            <div class="overlay">
+                <span>Condicionamento Total</span>
+                <h3>Funcional</h3>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=600&auto=format&fit=crop">
+
+            <div class="overlay">
+                <span>Saúde Cardiovascular</span>
+                <h3>Cardio</h3>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop">
+
+            <div class="overlay">
+                <span>Flexibilidade & Equilíbrio</span>
+                <h3>Yoga & Pilates</h3>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=600&auto=format&fit=crop">
+
+            <div class="overlay">
+                <span>Arte Marcial & Defesa</span>
+                <h3>Boxe</h3>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?q=80&w=600&auto=format&fit=crop">
+
+            <div class="overlay">
+                <span>Energia & Diversão</span>
+                <h3>Spinning</h3>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <p>Não sabe qual modalidade é ideal para você?</p>
+
+        <a href="contato.html" class="btn primary">
+            Fale com nossos professores
+        </a>
+    </section>
+
+    <footer class="footer">
+    <div class="container footer-grid">
+
+        <!-- ESQUERDA -->
+        <div class="footer-left">
+            <img src="logo.png" alt="Logo" class="footer-logo">
+
+            <p class="footer-quote">
+                "Se aparecerem pedras no caminho, levante-as e faça 4 séries de 10."
+            </p>
+
+            <a href="https://www.instagram.com/academia_imperio.gus" target="_blank" class="instagram-link">
+                
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07..."/>
+                </svg>
+               <span>@academia_imperio.gus</span> 
             </a>
         </div>
 
-    </main>
+        <!-- MEIO -->
+        <div class="footer-center">
+            <h4>Navegação</h4>
 
-    <footer class="bg-[#0A0A0A] border-t border-gray-800 pt-16 pb-8 mt-auto">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-                <img src="logo.png" alt="Academia Império Fitness" class="h-20 md:h-24 rounded-lg mb-6 shadow-lg border border-gray-800">
-                <p class="text-gray-400 text-sm italic mb-6">"Se aparecerem pedras no caminho, levante-as e faça 4 séries de 10."</p>
-            </div>
-            <div>
-                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Navegação</h4>
-                <ul class="space-y-3 text-gray-400 text-sm">
-                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
-                    <li><a href="planos.html" class="hover:text-white transition">Planos</a></li>
-                    <li><a href="modalidades.html" class="hover:text-white transition">Modalidades</a></li>
-                    <li><a href="horarios.html" class="hover:text-white transition">Horários</a></li>
-                    <li><a href="contato.html" class="hover:text-white transition">Contato</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-imperio-laranja font-bold uppercase tracking-widest text-sm mb-6">Fale Conosco</h4>
-                <ul class="space-y-4 text-gray-400 text-sm">
-                    <li class="flex items-start gap-3">
-                        <svg class="h-5 w-5 text-gray-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                        Rua Capitão Pedro Rodrigues, Nº 430<br>Magano – Garanhuns/PE
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <svg class="h-5 w-5 text-gray-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        Seg-Sex: 05h às 22h | Sáb: 06h-10h e 14h-18h
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="modalidades.html">Modalidades</a></li>
+                <li><a href="horarios.html">Horários</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
         </div>
-        <div class="container mx-auto px-6 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-            <p>&copy; 2026 Academia Império Fitness. Todos os direitos reservados.</p>
-            <p class="mt-2 md:mt-0">Garanhuns - PE</p>
+
+        <!-- DIREITA -->
+        <div class="footer-right">
+            <h4>Fale Conosco</h4>
+
+            <ul>
+                <li class="item">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+                    </svg>
+                    Rua Capitão Pedro Rodrigues, Nº 430 <br>
+                    Magano – Garanhuns/PE
+                </li>
+
+                <li class="item">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M3 5a2 2 0 012-2h3l2 5-2 1a11 11 0 005 5l1-2 5 2v3a2 2 0 01-2 2h-1C9 21 3 15 3 7V5z"/>
+                    </svg>
+                   <span>+55 (87) 988112436</span>
+                </li>
+
+                <li class="item">
+                    <svg viewBox="0 0 24 24" class="icon">
+                        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h-4V7h2v4h2z"/>
+                    </svg>
+                   <span> Seg-Sex: 05h às 22h <br>
+                    Sáb: 06h-10h | 14h-18h <br>
+                    Dom: Fechado</span>
+                </li>
+            </ul>
         </div>
-    </footer>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Academia Império Fitness</p>
+        <p>Garanhuns - PE</p>
+    </div>
+</footer>
+
+</main>
+
+<!-- usa o mesmo footer padrão que você já criou -->
 
 </body>
 </html>

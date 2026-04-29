@@ -1,12 +1,9 @@
 :root {
     --bg: #151515;
-    --card: #2a2a2a;
     --orange: #F37021;
     --gray: #aaaaaa;
-    --dark-blue: #0f172a;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +11,9 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: white;
+    font-family: 'Inter', sans-serif;
 }
 
 /* CONTAINER */
@@ -27,14 +24,11 @@ body {
 }
 
 /* HEADER */
-.header {
-    padding: 20px 0;
-}
-
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .logo {
@@ -49,165 +43,87 @@ body {
 .nav a {
     color: var(--gray);
     text-decoration: none;
-    font-weight: 500;
 }
 
-.nav a:hover,
-.nav a.active {
+.nav a.active,
+.nav a:hover {
     color: var(--orange);
-}
-
-/* MAIN */
-.main {
-    padding: 60px 0;
 }
 
 /* INTRO */
 .intro {
     text-align: center;
-    margin-bottom: 70px;
+    margin: 60px 0;
 }
 
 .intro h1 {
     font-family: 'Montserrat';
     font-size: 48px;
-    margin: 10px 0;
 }
 
 .intro span {
     color: var(--orange);
 }
 
-.intro p {
-    color: var(--gray);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* PLANOS */
-.plans {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
+/* GRID */
+.modalidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 /* CARD */
-.plan-card {
-    background: var(--card);
-    padding: 30px;
-    border-radius: 14px;
-    width: 300px;
-    text-align: center;
-    transition: 0.3s;
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 400px;
 }
 
-/* TÍTULO */
-.plan-card h3 {
-    margin-bottom: 10px;
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: brightness(0.7);
 }
 
-/* PREÇO */
-.price {
-    font-size: 32px;
-    font-weight: 900;
-    margin: 15px 0;
-}
-
-/* preço mensal e anual */
-.plan-card .price {
-    color: white;
-}
-
-/* descrição */
-.description {
-    font-size: 14px;
-    color: var(--gray);
-    margin-bottom: 20px;
-}
-
-/* lista */
-.plan-card ul {
-    list-style: none;
-    margin: 20px 0;
-}
-
-.plan-card li {
-    margin-bottom: 10px;
-}
-
-/* BOTÕES */
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-/* botão azul escuro */
-.secondary {
-    background: var(--dark-blue);
-    color: white;
-}
-
-/* botão laranja */
-.primary {
-    background: var(--orange);
-    color: white;
-}
-
-/* CARD DESTAQUE */
-.highlight {
-    background: white;
-    color: black;
-    border: 3px solid var(--orange);
-
-    transform: translateY(-30px) scale(1.05);
-    z-index: 2;
-
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-/* preço preto no destaque */
-.highlight .price {
-    color: black;
-}
-
-
-/* badge */
-.badge {
+/* OVERLAY */
+.overlay {
     position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--orange);
-    color: white;
-    padding: 5px 12px;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    background: linear-gradient(to top, black, transparent);
+    transition: 0.4s;
+}
+
+.overlay span {
     font-size: 12px;
-    font-weight: bold;
-    border-radius: 20px;
+    color: var(--orange);
 }
 
-/* hover efeito */
-.plan-card:hover {
-    transform: translateY(-5px);
+.overlay h3 {
+    font-size: 24px;
+    font-family: 'Montserrat';
 }
 
-.highlight:hover {
-    transform: translateY(-35px) scale(1.07);
+/* HOVER */
+.card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.card:hover .overlay {
+    transform: translateY(-10px);
 }
 
 /* CTA */
 .cta {
     text-align: center;
-    margin-top: 80px;
-}
-
-.cta h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
+    margin: 80px 0;
 }
 
 .cta p {
@@ -215,8 +131,19 @@ body {
     margin-bottom: 20px;
 }
 
+/* BOTÃO */
+.btn {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-.footer {
+.primary {
+    background: var(--orange);
+    color: white;
+}
+
+footer {
     background: #0a0a0a;
     padding: 60px 0 20px;
 }
@@ -255,6 +182,11 @@ body {
     width: 16px;
     height: 16px;
     fill: currentColor;
+}
+
+.instagram:hover {
+    color: var(--orange);
+    border-color: var(--orange);
 }
 
 
@@ -334,4 +266,3 @@ body {
     border-color: #F37021;
     color: #F37021;
 }
-
