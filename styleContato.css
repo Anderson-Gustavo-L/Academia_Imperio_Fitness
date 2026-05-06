@@ -239,3 +239,41 @@ body {
 }
 
 .map-box { margin-top: 20px; border-radius: 8px; overflow: hidden; }
+
+@media (max-width: 768px) {
+    .header-content { flex-direction: column; text-align: center; gap: 15px; }
+    .nav { flex-wrap: wrap; justify-content: center; }
+    .desktop-only { display: none; } 
+
+    .hero h1 { font-size: 38px; }
+    .hero-buttons { flex-direction: column; }
+    .stats-grid, 
+    .features-grid, 
+    .about-grid, 
+    .footer-grid, 
+    .days-grid, 
+    .contact-grid,
+    .plans {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .feature, .plan-card, .day-card, .form-card, .info-card {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
