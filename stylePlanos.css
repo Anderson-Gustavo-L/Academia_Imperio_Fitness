@@ -335,13 +335,20 @@ body {
     color: #F37021;
 }
 
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
 @media (max-width: 768px) {
+    /* Ajusta o Cabeçalho */
     .header-content { flex-direction: column; text-align: center; gap: 15px; }
     .nav { flex-wrap: wrap; justify-content: center; }
-    .desktop-only { display: none; } 
+    .desktop-only { display: none; } /* Esconde o botão do menu no celular */
 
+    /* Ajusta Textos Principais */
     .hero h1 { font-size: 38px; }
     .hero-buttons { flex-direction: column; }
+    
+    /* Transforma TODAS as Grids de colunas em 1 única coluna (Vertical) */
     .stats-grid, 
     .features-grid, 
     .about-grid, 
@@ -356,15 +363,18 @@ body {
         text-align: center;
     }
 
+    /* Ajusta as larguras para o celular */
     .feature, .plan-card, .day-card, .form-card, .info-card {
         width: 100% !important;
         max-width: 100%;
     }
 
+    /* Permite que a tabela de horários role para o lado sem quebrar a tela */
     .table-wrapper {
         overflow-x: auto;
     }
 
+    /* Ajusta o rodapé */
     .footer-left, .footer-center, .footer-right {
         width: 100% !important;
         display: flex;
